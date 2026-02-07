@@ -47,12 +47,6 @@
 
                     <article class="post-card-dark">
 
-                        <?php if ( current_user_can( 'edit_posts' ) ) : ?>
-                            <div class="admin-card-actions">
-                                <a href="<?php echo get_edit_post_link(); ?>" class="action-icon edit">✎</a>
-                                <a href="<?php echo get_delete_post_link(); ?>" class="action-icon delete" onclick="return confirm('Usunąć?');">✕</a>
-                            </div>
-                        <?php endif; ?>
 
                         <a href="<?php the_permalink(); ?>" class="post-card-img" style="height: 220px; background: url('<?php echo $thumb; ?>') center/cover; display: block;"></a>
 

@@ -82,12 +82,4 @@ window.addEventListener('load', function() {
         </div>
     </header>
 
-    <?php if ( current_user_can( 'edit_posts' ) && ( is_home() || is_singular( 'post' ) ) ) : ?>
-        <div style="background: #fff; border-bottom: 1px solid #ddd; padding: 10px; text-align: center; font-size: 13px;">
-            <span style="margin-right: 15px; font-weight: 600;">Panel Redaktora:</span>
-            <a href="<?php echo admin_url( 'post-new.php' ); ?>" style="background: var(--brand-blue); color: #fff; padding: 4px 12px; border-radius: 4px; text-decoration: none;">+ Dodaj Artykuł</a>
-            <?php if ( is_singular( 'post' ) ) : ?>
-                <a href="<?php echo get_edit_post_link(); ?>" style="color: var(--brand-blue); border: 1px solid var(--brand-blue); padding: 4px 12px; border-radius: 4px; text-decoration: none; margin-left: 10px;">Edytuj</a>
-            <?php endif; ?>
-        </div>
-    <?php endif; ?>
+

@@ -1269,14 +1269,14 @@ body.loaded #site-preloader {
    DYSKRETNY ADMIN UI (PREMIUM)
    ========================================= */
 
-/* --- 1. MAGICZNY PRZYCISK DODAWANIA (FAB) --- */
+/* --- NAPRAWIONY MAGICZNY PRZYCISK (FAB) --- */
 .admin-fab-btn {
   position: fixed;
   bottom: 30px;
-  left: 30px; /* Lewa strona, dla równowagi */
+  left: 30px;
   width: 60px;
   height: 60px;
-  background: var(--text-main); /* Czarny (bardzo elegancki) */
+  background: var(--brand-blue);
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -1285,37 +1285,41 @@ body.loaded #site-preloader {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   text-decoration: none;
   z-index: 9999;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: background 0.3s; /* Usunięto transform stąd */
 }
 
 .admin-fab-btn span {
   font-size: 2rem;
-  font-weight: 300;
-  line-height: 1;
-  margin-top: -4px; /* Optyczna korekta */
+  margin-top: -4px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animacja tylko dla plusa */
+  display: block;
 }
 
-/* Efekt po najechaniu */
+/* Efekt: Plus się kręci, tło zmienia kolor, ale guzik stoi w miejscu */
 .admin-fab-btn:hover {
-  background: var(--brand-blue);
-  transform: scale(1.1) rotate(90deg); /* Fajny obrót plusem */
-  box-shadow: 0 15px 40px rgba(41, 143, 226, 0.4);
+  background: #fff;
+  color: var(--brand-blue);
 }
 
-/* Tooltip (dymek) po najechaniu */
+.admin-fab-btn:hover span {
+  transform: rotate(90deg); /* Obrót tylko plusika */
+}
+
+/* Tooltip (Dymek) - Teraz będzie stał prosto */
 .admin-fab-btn::after {
   content: 'Dodaj wpis';
   position: absolute;
-  left: 75px;
+  left: 70px; /* Po prawej stronie przycisku */
   background: #333;
   color: #fff;
-  padding: 5px 10px;
+  padding: 5px 12px;
   border-radius: 4px;
   font-size: 0.8rem;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
   white-space: nowrap;
+  transform: none !important; /* Blokada obracania */
 }
 
 .admin-fab-btn:hover::after {

@@ -78,6 +78,13 @@
         document.body.classList.add('loaded');
     });
     </script>
+    <?php if ( current_user_can( 'edit_posts' ) ) : ?>
+    <a href="<?php echo admin_url( 'post-new.php' ); ?>" class="admin-fab-btn" title="Dodaj nowy wpis">
+        <span>+</span>
+    </a>
+<?php endif; ?>
+
+</body> </html>
 </body>
 </html>
 </body>
