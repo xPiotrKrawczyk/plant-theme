@@ -1880,3 +1880,322 @@ body.loaded #site-preloader {
   text-decoration: underline;
   font-weight: 600;
 }
+/* =========================================
+   SKLEP - FIX "WIDMA" (Własny Grid)
+   ========================================= */
+
+/* 1. KONTENER SIATKI */
+.plant-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr); /* Sztywno 3 kolumny */
+  gap: 30px;
+  width: 100%;
+}
+
+/* Usuwamy ewentualne pseudoelementy (to one tworzyły widmo!) */
+.plant-grid::before,
+.plant-grid::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* 2. KARTA PRODUKTU */
+.plant-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--brand-blue);
+}
+
+.plant-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 3. ZDJĘCIE */
+.plant-img-wrapper img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* 4. TYTUŁ I CENA */
+.plant-card h3 {
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.plant-card .price {
+  display: block;
+  color: var(--brand-blue);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* 5. PRZYCISK */
+.plant-btn-wrapper .button {
+  background: var(--brand-blue) !important;
+  color: #fff !important;
+  padding: 10px 20px !important;
+  border-radius: 50px !important;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: auto; /* Dopycha przycisk do dołu */
+}
+
+/* --- RESPONSYWNOŚĆ --- */
+@media (max-width: 900px) {
+  .plant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .plant-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================
+   SKLEP: KATEGORIE I SORTOWANIE (Stylizacja)
+   ========================================= */
+
+.shop-filters-container {
+  margin-bottom: 40px;
+}
+
+/* 1. KATEGORIE (Przyciski) */
+.shop-categories-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.cat-pill {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cat-pill:hover {
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
+  transform: translateY(-2px);
+}
+
+.cat-pill.active {
+  background: var(--brand-blue);
+  color: #fff;
+  border-color: var(--brand-blue);
+  box-shadow: 0 5px 15px rgba(41, 143, 226, 0.4); /* Niebieska poświata */
+}
+
+/* 2. PASEK NARZĘDZI (Licznik + Sortowanie) */
+.shop-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa; /* Jasne tło paska */
+  padding: 15px 25px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.results-count-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* 3. DROPDOWN SORTOWANIA */
+.sorting-dropdown select {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  min-width: 200px;
+}
+
+.sorting-dropdown select:focus {
+  border-color: var(--brand-blue);
+}
+
+/* --- Responsywność --- */
+@media (max-width: 768px) {
+  .shop-toolbar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .sorting-dropdown select {
+    width: 100%;
+  }
+}
+/* =========================================
+   SKLEP: UKŁAD Z SIDEBAREM (Lewa kolumna)
+   ========================================= */
+
+/* 1. GŁÓWNY KONTENER (Grid Layout) */
+.shop-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* 280px Sidebar | Reszta Produkty */
+  gap: 40px;
+  align-items: start;
+}
+
+/* 2. STYLIZACJA SIDEBARA (Lewa strona) */
+.shop-sidebar {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+
+.sidebar-widget {
+  margin-bottom: 40px;
+}
+
+.sidebar-widget h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--brand-blue);
+  display: inline-block;
+}
+
+/* Lista Kategorii */
+.product-categories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-categories li {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 12px;
+}
+
+.product-categories li:last-child {
+  border: none;
+}
+
+.product-categories a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  transition: color 0.3s;
+}
+
+.product-categories a:hover,
+.product-categories li.current-cat a {
+  color: var(--brand-blue);
+  font-weight: 700;
+}
+
+.product-categories .count {
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Wyszukiwarka w sidebarze */
+.woocommerce-product-search {
+  display: flex;
+  gap: 5px;
+}
+
+.woocommerce-product-search input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.woocommerce-product-search button {
+  background: var(--brand-blue);
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 15px;
+}
+
+/* 3. DOSTOSOWANIE PRAWEJ KOLUMNY */
+.shop-toolbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.plant-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr); /* 3 produkty w rzędzie */
+  gap: 30px;
+}
+
+/* --- RESPONSYWNOŚĆ --- */
+
+/* Tablet (Zmień na 2 produkty) */
+@media (max-width: 1100px) {
+  .plant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Telefon (Sidebar idzie na dół lub górę) */
+@media (max-width: 800px) {
+  .shop-layout {
+    grid-template-columns: 1fr; /* Wszystko w jednej kolumnie */
+  }
+
+  .shop-sidebar {
+    order: 2; /* Sidebar pod produktami (lub daj 0 żeby był nad) */
+    margin-top: 40px;
+  }
+
+  .plant-grid {
+    grid-template-columns: 1fr; /* 1 produkt na telefonie */
+  }
+}

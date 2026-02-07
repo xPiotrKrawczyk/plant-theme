@@ -78,7 +78,10 @@
         document.body.classList.add('loaded');
     });
     </script>
-    <?php if ( current_user_can( 'edit_posts' ) ) : ?>
+<?php
+// Sprawdzamy: Czy user to admin ORAZ (czy to strona główna bloga LUB kategoria LUB pojedynczy wpis)
+if ( current_user_can( 'edit_posts' ) && ( is_home() || is_category() || is_single() ) && !is_product() && !is_cart() && !is_checkout() ) :
+?>
     <a href="<?php echo admin_url( 'post-new.php' ); ?>" class="admin-fab-btn" title="Dodaj nowy wpis">
         <span>+</span>
     </a>

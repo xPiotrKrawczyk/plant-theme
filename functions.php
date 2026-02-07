@@ -254,3 +254,36 @@ function plant_validate_privacy_checkbox( $errors, $username, $email ) {
     return $errors;
 }
 add_filter( 'woocommerce_process_registration_errors', 'plant_validate_privacy_checkbox', 10, 3 );
+
+
+/* =========================================
+   USTAWIENIA SKLEPU (WOOCOMMERCE)
+   ========================================= */
+
+// 1. Zmiana napisu "Sale!" na "Promocja"
+add_filter( 'woocommerce_sale_flash', 'plant_rename_sale_badge' );
+function plant_rename_sale_badge() {
+    return '<span class="onsale">PROMOCJA</span>';
+}
+
+// 2. Wymuszenie 3 kolumn na stronie sklepu (Dla porządku)
+add_filter( 'loop_shop_columns', 'plant_loop_columns', 999 );
+if ( ! function_exists( 'plant_loop_columns' ) ) {
+    function plant_loop_columns() {
+        return 3; // 3 produkty w rzędzie
+    }
+}
+
+// 3. Zmiana liczby produktów na stronę (np. 12)
+add_filter( 'loop_shop_per_page', 'plant_products_per_page', 20 );
+function plant_products_per_page( $cols ) {
+    return 12;
+}
+
+/* =========================================
+   WOOCOMMERCE SUPPORT (WAŻNE!)
+   ========================================= */
+function plant_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'plant_add_woocommerce_support' );
