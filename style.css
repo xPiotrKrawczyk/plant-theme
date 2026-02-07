@@ -1648,3 +1648,137 @@ body.loaded #site-preloader {
 .social-btn.yt:hover {
   background: #ff0000;
 } /* YouTube Red */
+
+/* =========================================
+   WOOCOMMERCE: MOJE KONTO (FIX FLEXBOX)
+   ========================================= */
+
+/* 1. GŁÓWNY KONTENER (Zamiast Grid dajemy Flex) */
+.woocommerce-account .woocommerce {
+  display: flex !important;
+  flex-wrap: nowrap; /* Trzymaj w jednej linii na PC */
+  gap: 50px; /* Odstęp między menu a treścią */
+  align-items: flex-start; /* Wyrównaj do góry */
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* 2. LEWA KOLUMNA (NAWIGACJA) */
+.woocommerce-MyAccount-navigation {
+  flex: 0 0 280px; /* Sztywna szerokość 280px, nie kurcz się */
+  width: 280px;
+}
+
+.woocommerce-MyAccount-navigation ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.woocommerce-MyAccount-navigation li {
+  border-bottom: 1px solid #eee;
+  margin: 0 !important;
+}
+
+.woocommerce-MyAccount-navigation a {
+  display: block;
+  padding: 15px 20px;
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+  background: #fff;
+  transition: all 0.3s;
+}
+
+.woocommerce-MyAccount-navigation a:hover {
+  background: #f4f7f6;
+  color: var(--brand-blue);
+  padding-left: 25px;
+}
+
+.woocommerce-MyAccount-navigation .is-active a {
+  background: var(--brand-blue);
+  color: #fff;
+}
+
+/* 3. PRAWA STRONA (TREŚĆ I FORMULARZE) */
+.woocommerce-MyAccount-content {
+  flex-grow: 1; /* Zajmij całą resztę miejsca! */
+  width: 100%; /* Wymuś pełną szerokość */
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+/* 4. NAPRAWA ZGNIECIONYCH PÓL (To naprawi Twój screen) */
+.woocommerce-EditAccountForm fieldset {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+.woocommerce-form-row {
+  width: 100% !important;
+  float: none !important; /* Wyłączamy stare opływanie Woo */
+  margin-bottom: 20px;
+  display: block !important;
+}
+
+.woocommerce-form-row label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.woocommerce-Input {
+  width: 100% !important; /* Rozciągnij input na maxa */
+  padding: 12px 15px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 6px !important;
+  background: #f9f9f9 !important;
+  box-sizing: border-box; /* Ważne, żeby padding nie rozpychał */
+  height: auto !important;
+  line-height: normal !important;
+}
+
+.woocommerce-Input:focus {
+  border-color: var(--brand-blue) !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 3px rgba(41, 143, 226, 0.1);
+  outline: none;
+}
+
+/* Przycisk zapisu */
+.woocommerce-Button {
+  background: var(--brand-blue) !important;
+  color: #fff !important;
+  padding: 15px 40px !important;
+  border-radius: 50px !important;
+  border: none !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* --- RESPANSYWNOŚĆ (TELEFONY) --- */
+@media (max-width: 900px) {
+  .woocommerce-account .woocommerce {
+    flex-direction: column !important; /* Na telefonie jeden pod drugim */
+  }
+
+  .woocommerce-MyAccount-navigation {
+    width: 100% !important;
+    flex: none;
+  }
+}
