@@ -84,8 +84,45 @@
     </a>
 <?php endif; ?>
 
-</body> </html>
-</body>
-</html>
-</body>
-</html>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Sprawdzamy, czy jesteśmy na stronie logowania (czy istnieje kontener #customer_login)
+    var loginContainer = document.getElementById('customer_login');
+    var loginForm = document.querySelector('.u-column1'); // Logowanie
+    var registerForm = document.querySelector('.u-column2'); // Rejestracja
+
+    if (loginContainer && loginForm && registerForm) {
+
+        // 1. Tworzymy HTML zakładek
+        var tabsHtml = `
+            <div class="login-switch-tabs">
+                <div class="login-tab-btn active" data-target="login">Zaloguj się</div>
+                <div class="login-tab-btn" data-target="register">Załóż konto</div>
+            </div>
+        `;
+
+        // 2. Wklejamy zakładki na samą górę kontenera
+        loginContainer.insertAdjacentHTML('afterbegin', tabsHtml);
+
+        // 3. Obsługa kliknięć
+        var tabs = document.querySelectorAll('.login-tab-btn');
+
+        tabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                // Reset klas active
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                // Logika pokazywania
+                if (this.getAttribute('data-target') === 'login') {
+                    loginForm.style.display = 'block';
+                    registerForm.style.display = 'none';
+                } else {
+                    loginForm.style.display = 'none';
+                    registerForm.style.display = 'block';
+                }
+            });
+        });
+    }
+});
+</script>

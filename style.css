@@ -1786,3 +1786,97 @@ body.loaded #site-preloader {
     flex: none;
   }
 }
+/* =========================================
+   LOGOWANIE / REJESTRACJA (SWITCHER TABS)
+   ========================================= */
+
+/* 1. Kontener formularzy - Jeden centralny blok */
+#customer_login {
+  display: block !important; /* Wyłączamy Grid (obok siebie) */
+  max-width: 480px; /* Wąski, elegancki słupek */
+  margin: 60px auto;
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Żeby rogi się nie psuły */
+}
+
+/* 2. Ukrywamy Rejestrację na start */
+.u-column2 {
+  display: none;
+}
+
+/* 3. Stylizacja kolumn (żeby wyglądały tak samo) */
+.u-column1,
+.u-column2 {
+  width: 100% !important;
+  padding: 40px;
+  border: none;
+  box-shadow: none;
+}
+
+/* Ukrywamy domyślne nagłówki h2 w środku, bo mamy zakładki */
+#customer_login h2 {
+  display: none;
+}
+
+/* 4. Stylizacja Zakładek (które doda JS) */
+.login-switch-tabs {
+  display: flex;
+  width: 100%;
+  background: #f4f7f6;
+  border-bottom: 1px solid #eee;
+}
+
+.login-tab-btn {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #888;
+  transition: all 0.3s;
+}
+
+.login-tab-btn:hover {
+  color: var(--brand-blue);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.login-tab-btn.active {
+  background: #fff;
+  color: var(--brand-blue);
+  border-bottom: 2px solid var(--brand-blue); /* Aktywna linia */
+  margin-bottom: -1px;
+}
+/* Styl checkboxa zgody */
+.woocommerce-privacy-policy-text {
+  margin-bottom: 20px;
+  clear: both; /* Żeby na pewno był pod imieniem i nazwiskiem */
+  padding-top: 10px;
+}
+
+.woocommerce-privacy-policy-text label {
+  display: flex !important; /* Układ flex dla równego tekstu */
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 400 !important; /* Zwykły tekst, nie pogrubiony */
+}
+
+.woocommerce-privacy-policy-text input[type='checkbox'] {
+  margin-top: 4px; /* Drobna korekta, żeby checkbox był równo z pierwszą linią tekstu */
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+}
+
+.woocommerce-privacy-policy-link {
+  color: var(--brand-blue);
+  text-decoration: underline;
+  font-weight: 600;
+}
