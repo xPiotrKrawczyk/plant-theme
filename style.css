@@ -1366,3 +1366,285 @@ body.loaded #site-preloader {
 .action-icon.delete:hover {
   color: #e74c3c;
 }
+
+/* =========================================
+   POPRAWKI PREMIUM (DODAJ NA KOŃCU PLIKU)
+   ========================================= */
+
+/* 1. REALIZACJE: PROJEKT MIESIĄCA (PREMIUM LOOK) */
+.featured-project-section {
+  margin: 80px 0 120px; /* Odstęp od góry i OD STOPKI */
+  background: #fff;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15); /* Głęboki cień */
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; /* Zdjęcie szersze niż opis */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.featured-img-col {
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Badge "Projekt Miesiąca" */
+.project-badge {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: var(--brand-blue);
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.featured-txt-col {
+  background: #111; /* Ciemne tło dla kontrastu */
+  color: #fff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-txt-col h2 {
+  font-family: 'Playfair Display', serif; /* Elegancki font */
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.featured-txt-col p {
+  opacity: 0.8;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.tech-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+}
+.spec-item span {
+  display: block;
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+}
+.spec-item strong {
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 3px;
+}
+
+/* 2. KONTAKT: FORMULARZ "GHOST" (BEZ RAMEK) */
+.ghost-form .form-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.ghost-form label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.ghost-form input,
+.ghost-form select,
+.ghost-form textarea {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #ddd; /* Tylko dolna linia */
+  background: transparent;
+  border-radius: 0;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  transition: border-color 0.3s;
+}
+
+.ghost-form input:focus,
+.ghost-form select:focus,
+.ghost-form textarea:focus {
+  outline: none;
+  border-bottom-color: var(--brand-blue);
+}
+
+/* 3. BLOG: DARK MODE & FILTR */
+.blog-dark-section {
+  background-color: #101820; /* Ciemne tło sekcji */
+  color: #ccc;
+  padding: 80px 0;
+}
+
+.blog-filter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+.filter-tag {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+.filter-tag:hover,
+.filter-tag.active {
+  background: var(--brand-blue);
+  border-color: var(--brand-blue);
+  color: #fff;
+}
+
+/* Kafelki w Dark Mode */
+.blog-dark-section .post-card {
+  background: #1a2632;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.blog-dark-section .post-card h3 a {
+  color: #fff;
+}
+.blog-dark-section .post-excerpt {
+  color: #aaa;
+}
+.blog-dark-section .post-date {
+  background: #1a2632;
+  color: #fff;
+}
+
+/* 4. HOME: DYSKRETNA IKONA SCROLLA */
+.scroll-down {
+  opacity: 0.3; /* Prawie niewidoczna */
+  transform: translateX(-50%) scale(0.6); /* Mniejsza */
+  bottom: 20px;
+  transition: opacity 0.3s;
+}
+.scroll-down:hover {
+  opacity: 1;
+}
+/* =========================================
+   DODATKI: SOCIAL MEDIA & KONTAKT OSOBOWY
+   ========================================= */
+
+/* --- 1. SEKCJA LOKALIZACJA --- */
+.contact-block {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+.contact-block .icon-box {
+  font-size: 1.5rem;
+}
+.contact-block strong {
+  display: block;
+  color: var(--text-main);
+}
+
+/* --- 2. GRID OSOBOWY (2 OSOBY) --- */
+.contact-persons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dwie kolumny */
+  gap: 20px;
+}
+
+.person-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.person-card:hover {
+  border-color: var(--brand-blue);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.person-card strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--brand-blue);
+  margin-bottom: 10px;
+  min-height: 40px; /* Wyrównuje wysokość, gdy tytuł jest długi */
+}
+
+.contact-link {
+  display: block;
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+.contact-link:hover {
+  color: var(--brand-blue);
+}
+
+/* --- 3. PREMIUM SOCIAL MEDIA BUTTONS --- */
+.social-links-premium {
+  display: flex;
+  gap: 15px;
+}
+
+.social-btn {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 50%; /* Okrągłe */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efekt sprężynki */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Kolory marek po najechaniu */
+.social-btn:hover {
+  color: #fff;
+  border-color: transparent;
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.social-btn.fb:hover {
+  background: #1877f2;
+} /* Facebook Blue */
+.social-btn.ig:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+} /* Instagram Gradient */
+.social-btn.tt:hover {
+  background: #000000;
+} /* TikTok Black */
+.social-btn.yt:hover {
+  background: #ff0000;
+} /* YouTube Red */

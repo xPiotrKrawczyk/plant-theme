@@ -1,115 +1,52 @@
 <?php
 /**
- * Template Name: Strona Realizacje (WOW)
+ * Template Name: Strona Realizacje (Premium Fix)
  */
 get_header();
 ?>
 
 <main class="site-main">
 
-    <section class="portfolio-hero" style="background: linear-gradient(rgba(16, 24, 32, 0.8), rgba(16, 24, 32, 0.7)), url('http://plantscape-home.local/wp-content/uploads/2026/02/360_1_small_800px_400px.jpg'); background-size: cover; background-position: center; padding: 120px 20px; text-align: center; color: #fff; background-attachment: fixed;">
-        <div class="container">
-            <span style="color: var(--brand-blue); text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">Portfolio Plant&Scape</span>
-            <h1 style="font-size: 3.5rem; margin: 15px 0 20px; color: #fff; text-shadow: 0 4px 15px rgba(0,0,0,0.6);">Nasze Dzieła.<br>Twoja Inspiracja.</h1>
+    <section class="page-header" style="background: url('https://images.unsplash.com/photo-1544943910-4c1dc3fe949b?auto=format&fit=crop&w=1600&q=80') center/cover; height: 350px; display: flex; align-items: center; justify-content: center; position: relative;">
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);"></div>
+        <div class="container" style="position: relative; z-index: 2; text-align: center; color: #fff;">
+            <h1 style="font-size: 3rem; margin: 0; color: #fff;">Portfolio</h1>
+            <p style="opacity: 0.9; margin-top: 10px;">Wybrane projekty z ostatnich 10 lat.</p>
         </div>
     </section>
 
-    <section class="case-study" style="background: #fff; padding: 100px 20px;">
-        <div class="container">
-            <div class="section-header-center">
-                <span style="color: var(--brand-blue); font-weight: 700; text-transform: uppercase;">Wyróżniona Realizacja</span>
-                <h2 style="font-size: 2.5rem; margin-top: 10px;">Projekt: "Misty Mountain"</h2>
+    <div class="container">
+
+        <div class="featured-project-section">
+            <div class="featured-img-col" style="background-image: url('https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&w=1200&q=80');">
+                <div class="project-badge">⭐ Projekt Miesiąca</div>
             </div>
 
-            <div class="case-study-grid">
-                <div class="case-img">
-                    <img src="http://plantscape-home.local/wp-content/uploads/2026/02/akwarium-nowoczesne-nemo-1-scaled-1.jpg" alt="Featured Aquarium">
-                </div>
+            <div class="featured-txt-col">
+                <span style="color: var(--brand-blue); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 10px; display: block;">Case Study</span>
+                <h2>Misty Mountain<br>Aquascape</h2>
+                <p>Aranżacja w stylu Iwagumi stworzona dla wrocławskiego biura architektonicznego. Głównym założeniem był minimalizm i uspokajający wpływ natury.</p>
 
-                <div class="case-info">
-                    <h3>Dane Techniczne</h3>
-                    <p style="color: #666; margin-bottom: 30px;">Zbiornik założony w prywatnej rezydencji we Wrocławiu. Celem było stworzenie minimalistycznego krajobrazu górskiego (Iwagumi) wymagającego minimalnej obsługi.</p>
-
-                    <ul class="specs-list">
-                        <li><strong>Akwarium:</strong> OptiWhite 120x50x50cm (300L)</li>
-                        <li><strong>Styl:</strong> Iwagumi (Skały Seiryu Stone)</li>
-                        <li><strong>Oświetlenie:</strong> 2x LED RGB 90W</li>
-                        <li><strong>Filtracja:</strong> Oase BioMaster Thermo 600</li>
-                        <li><strong>Rośliny:</strong> Micranthemum Monte Carlo, Eleocharis</li>
-                        <li><strong>Czas realizacji:</strong> 8 godzin</li>
-                    </ul>
-
-                    <a href="<?php echo home_url('/kontakt'); ?>" class="btn-primary" style="margin-top: 20px;">Chcę taki zbiornik</a>
+                <div class="tech-specs">
+                    <div class="spec-item"><span>Litraż</span><strong>350L OptiWhite</strong></div>
+                    <div class="spec-item"><span>Styl</span><strong>Iwagumi</strong></div>
+                    <div class="spec-item"><span>Hardscape</span><strong>Seiryu Stone</strong></div>
+                    <div class="spec-item"><span>Czas</span><strong>14 Dni</strong></div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="portfolio-gallery" style="background: #f4f7f6; padding: 100px 20px;">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 60px;">Pozostałe Realizacje</h2>
-
-            <div class="gallery-grid">
-
-                <div class="gallery-item">
-                    <div class="gallery-img" style="background-image: url('http://plantscape-home.local/wp-content/uploads/2026/02/arar5.jpg');"></div>
-                    <div class="gallery-overlay">
-                        <h3>Biuro IT Wrocław</h3>
-                        <span>Styl: Ryuboku (Korzenie)</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="gallery-img" style="background-image: url('http://plantscape-home.local/wp-content/uploads/2026/02/arar4.jpg');"></div>
-                    <div class="gallery-overlay">
-                        <h3>Apartament SkyTower</h3>
-                        <span>Styl: Nature Aquarium</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="gallery-img" style="background-image: url('http://plantscape-home.local/wp-content/uploads/2026/02/image_6487327-1-scaled-1.jpg');"></div>
-                    <div class="gallery-overlay">
-                        <h3>Gabinet Stomatologiczny</h3>
-                        <span>Styl: Dutch (Holenderski)</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="gallery-img" style="background-image: url('http://plantscape-home.local/wp-content/uploads/2026/02/IwagumiZ.jpg');"></div>
-                    <div class="gallery-overlay">
-                        <h3>Hol Hotelowy</h3>
-                        <span>Styl: Hardscape Only</span>
-                    </div>
-                </div>
-
-                 <div class="gallery-item">
-                    <div class="gallery-img" style="background-image: url('http://plantscape-home.local/wp-content/uploads/2026/02/goldfish-swimming-glass-fishbowl-underwater-generative-ai-scaled.jpg');"></div>
-                    <div class="gallery-overlay">
-                        <h3>Salon SPA</h3>
-                        <span>Styl: Wabi-Kusa</span>
-                    </div>
-                </div>
-
-                 <div class="gallery-item">
-                    <div class="gallery-img" style="background-image: url('http://plantscape-home.local/wp-content/uploads/2026/02/Ryuboku3-1.jpg');"></div>
-                    <div class="gallery-overlay">
-                        <h3>Dom Jednorodzinny</h3>
-                        <span>Styl: Iwagumi</span>
-                    </div>
-                </div>
-
-            </div>
+        <h3 style="margin-bottom: 30px;">Pozostałe Realizacje</h3>
+        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 80px;">
+            <div class="gallery-item" style="height: 250px; background: url('https://images.unsplash.com/photo-1520412092553-157725e22137?auto=format&fit=crop&w=800&q=80') center/cover; border-radius: 8px;"></div>
+            <div class="gallery-item" style="height: 250px; background: url('https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=800&q=80') center/cover; border-radius: 8px;"></div>
+            <div class="gallery-item" style="height: 250px; background: url('https://images.unsplash.com/photo-1518349619113-03114f06ac3a?auto=format&fit=crop&w=800&q=80') center/cover; border-radius: 8px;"></div>
+            <div class="gallery-item" style="height: 250px; background: url('https://images.unsplash.com/photo-1535591273668-578e31182c4f?auto=format&fit=crop&w=800&q=80') center/cover; border-radius: 8px;"></div>
+            <div class="gallery-item" style="height: 250px; background: url('https://images.unsplash.com/photo-1544943910-4c1dc3fe949b?auto=format&fit=crop&w=800&q=80') center/cover; border-radius: 8px;"></div>
+            <div class="gallery-item" style="height: 250px; background: url('https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&w=800&q=80') center/cover; border-radius: 8px;"></div>
         </div>
-    </section>
 
-    <section class="portfolio-cta" style="background: #101820; color: #fff; padding: 80px 20px; text-align: center;">
-        <div class="container">
-            <h2 style="color: #fff; margin-bottom: 20px;">Podoba Ci się ten styl?</h2>
-            <p style="opacity: 0.8; margin-bottom: 40px;">Umów się na niezobowiązującą rozmowę. Stworzymy coś podobnego u Ciebie.</p>
-            <a href="<?php echo home_url('/kontakt'); ?>" class="btn-primary">Zapytaj o wycenę</a>
-        </div>
-    </section>
+    </div>
 
 </main>
 
