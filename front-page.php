@@ -25,7 +25,7 @@ get_header();
     <section class="home-intro">
         <div class="container intro-grid">
             <div class="intro-image-wrapper">
-                <img src="http://plantscape-home.local/wp-content/uploads/2026/02/closeup-shot-redhump-eartheater-fish-swimming-water-scaled.jpg" alt="Aquascaping Detail" class="intro-img">
+                <img src="http://plantscape-home.local/wp-content/uploads/2026/02/realziacja_8.jpg" alt="Aquascaping Detail" class="intro-img">
                 <div class="floating-box">
                     <strong>10 lat</strong>
                     <span>Doświadczenia</span>
@@ -73,7 +73,7 @@ get_header();
         </div>
     </section>
 
-    <section class="home-parallax" style="background-image: url('http://plantscape-home.local/wp-content/uploads/2026/02/yellow-red-betta-fish-swimming-scaled.jpg');">
+    <section class="home-parallax" style="background-image: url('http://plantscape-home.local/wp-content/uploads/2026/02/background_4-scaled.jpg');">
         <div class="parallax-overlay">
             <h3>"Akwarium to nie mebel. To kino, w którym film nigdy się nie kończy."</h3>
         </div>
@@ -116,7 +116,7 @@ get_header();
                 if ( $recent_posts->have_posts() ) :
                     while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
                         $bg_img = get_the_post_thumbnail_url( get_the_ID(), 'medium' );
-                        if ( empty($bg_img) ) { $bg_img = 'http://plantscape-home.local/wp-content/uploads/2026/02/sea-fish-blue-light-underwater-harmony-scaled.jpg'; }
+                        if ( empty($bg_img) ) { $bg_img = 'http://plantscape-home.local/wp-content/uploads/2026/02/background_3-scaled.jpg'; }
                 ?>
                     <a href="<?php the_permalink(); ?>" class="preview-card">
                         <div class="card-img" style="background-image: url('<?php echo $bg_img; ?>');"></div>

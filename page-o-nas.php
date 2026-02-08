@@ -7,7 +7,7 @@ get_header();
 
 <main class="site-main">
 
-    <section class="about-hero" style="background: linear-gradient(rgba(16, 24, 32, 0.8), rgba(16, 24, 32, 0.7)), url('https://images.unsplash.com/photo-1606613998513-c536063c9ef8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center; padding: 100px 20px; text-align: center; color: #fff;">
+    <section class="about-hero" style="background: linear-gradient(rgba(16, 24, 32, 0.8), rgba(16, 24, 32, 0.7)), url('http://plantscape-home.local/wp-content/uploads/2026/02/background_6.jpg'); background-size: cover; background-position: center; padding: 100px 20px; text-align: center; color: #fff;">
         <div class="container">
             <span style="color: var(--brand-blue); text-transform: uppercase; letter-spacing: 2px; font-weight: bold; font-size: 0.9rem;">Nasza Historia</span>
             <h1 style="font-size: 3rem; margin: 15px 0 20px; color: #fff;">Więcej niż akwarystyka.<br>Tworzymy żywe dzieła sztuki.</h1>
@@ -22,7 +22,7 @@ get_header();
 
             <div style="flex: 1; min-width: 300px;">
                 <div style="position: relative;">
-                    <img src="https://images.unsplash.com/photo-1519657635301-68bb60c798f7?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Aquascaping" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                    <img src="http://plantscape-home.local/wp-content/uploads/2026/02/background_6.jpg" alt="Aquascaping" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
                     <div style="position: absolute; bottom: -20px; right: -20px; width: 150px; height: 150px; background: var(--brand-blue); z-index: -1; border-radius: 12px; opacity: 0.2;"></div>
                 </div>
             </div>

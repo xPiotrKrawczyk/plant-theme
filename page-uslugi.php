@@ -7,7 +7,7 @@ get_header();
 
 <main class="site-main">
 
-    <section class="services-hero" style="background: linear-gradient(rgba(16, 24, 32, 0.8), rgba(16, 24, 32, 0.7)), url('http://plantscape-home.local/wp-content/uploads/2026/02/half-moon-betta-fish-with-beautiful-red-dress-scaled.jpg'); background-size: cover; background-position: center; padding: 120px 20px; text-align: center; color: #fff; background-attachment: fixed;">
+    <section class="services-hero" style="background: linear-gradient(rgba(16, 24, 32, 0.8), rgba(16, 24, 32, 0.7)), url('http://plantscape-home.local/wp-content/uploads/2026/02/realziacja_8.jpg'); background-size: cover; background-position: center; padding: 120px 20px; text-align: center; color: #fff; background-attachment: fixed;">
         <div class="container">
             <span style="color: var(--brand-blue); text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">Oferta Plant&Scape</span>
             <h1 style="font-size: 3.5rem; margin: 15px 0 20px;">Tworzymy podwodne światy.<br>Ty tylko je podziwiasz.</h1>
@@ -19,7 +19,7 @@ get_header();
 
             <div class="service-row">
                 <div class="service-img">
-                    <img src="http://plantscape-home.local/wp-content/uploads/2026/02/beautiful-fish-seabed-coral-reefs-underwater-beauty-fish-coral-reefs-scaled.jpg" alt="Zakładanie Akwarium">
+                    <img src="http://plantscape-home.local/wp-content/uploads/2026/02/realziacja_4.jpg" alt="Zakładanie Akwarium">
                 </div>
                 <div class="service-txt">
                     <span class="service-number">01</span>
@@ -47,13 +47,13 @@ get_header();
                     </ul>
                 </div>
                 <div class="service-img">
-                    <img src="http://plantscape-home.local/wp-content/uploads/2026/02/sung-jin-cho-9A0eG-p0LD4-unsplash-scaled.jpg" alt="Serwis Akwarium">
+                    <img src="http://plantscape-home.local/wp-content/uploads/2026/02/background_7jpeg.jpeg" alt="Serwis Akwarium">
                 </div>
             </div>
 
             <div class="service-row">
                 <div class="service-img">
-                    <img src="http://plantscape-home.local/wp-content/uploads/2026/02/closeup-shot-redhump-eartheater-fish-swimming-water-scaled.jpg" alt="Konsultacje">
+                    <img src="http://plantscape-home.local/wp-content/uploads/2026/02/realziacja_3.jpg" alt="Konsultacje">
                 </div>
                 <div class="service-txt">
                     <span class="service-number">03</span>

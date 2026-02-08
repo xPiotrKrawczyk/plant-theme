@@ -7,7 +7,7 @@ get_header();
 
 <main class="site-main">
 
-    <section class="contact-hero-modern" style="background: url('https://images.unsplash.com/photo-1520412092553-157725e22137?auto=format&fit=crop&w=1600&q=80') center/cover; padding: 100px 20px; text-align: center; color: #fff; position: relative;">
+    <section class="contact-hero-modern" style="background: url('http://plantscape-home.local/wp-content/uploads/2026/02/background_2-scaled.jpg') center/cover; padding: 100px 20px; text-align: center; color: #fff; position: relative;">
         <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6);"></div>
         <div class="container" style="position: relative; z-index: 2;">
             <h1 style="font-size: 3rem; margin: 0; color: #fff;">Kontakt</h1>

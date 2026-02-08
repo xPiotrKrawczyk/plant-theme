@@ -38,7 +38,7 @@
 
                     // 1. ZDJĘCIE
                     $thumb = get_the_post_thumbnail_url( get_the_ID(), 'large' );
-                    if(!$thumb) $thumb = 'https://images.unsplash.com/photo-1520412092553-157725e22137?auto=format&fit=crop&w=800&q=80';
+                    if(!$thumb) $thumb = 'http://plantscape-home.local/wp-content/uploads/2026/02/background_2-scaled.jpg';
 
                     // 2. AUTOR (LOGIKA: RĘCZNY CZY SYSTEMOWY?)
                     $custom_author = get_post_meta( get_the_ID(), '_custom_author_name', true );
